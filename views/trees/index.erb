@@ -1,0 +1,13 @@
+<h3>Tree List</h3>
+<a href="/trees/new">New Tree</a>
+
+<ul>
+  <% trees.each do |tree| %>
+      <li>
+        <p><a href="/trees/<%= tree["id"] %>"><%= tree["name"] %></a></p>
+        <p><%= tree["species"] %></p>
+        <p><%= tree["country"] %></p>
+        <img src="<%= tree["image"] %>" />
+      </li>
+  <% end %>
+</ul>

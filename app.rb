@@ -18,6 +18,12 @@ class App < Sinatra::Application
     erb :home, locals: {trees: trees}
   end
 
+  get "/trees" do
+    trees = @trees_table.all
+
+    erb :"trees/index", locals: {trees: trees}
+  end
+
   get "/trees/new" do
     erb :"trees/new"
   end
