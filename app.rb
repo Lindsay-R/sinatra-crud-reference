@@ -22,8 +22,14 @@ class App < Sinatra::Base
     erb :"trees/new"
   end
 
+  get "/trees/:id" do
+    tree = @trees_table.find(params[:id])
+
+    erb :"trees/show", locals: {tree: tree}
+  end
+
   post "/trees" do
-    @trees_table.create(
+    id = @trees_table.create(
       name: params[:name],
       species: params[:species],
       country: params[:country],
@@ -32,6 +38,6 @@ class App < Sinatra::Base
 
     flash[:notice] = "Tree created"
 
-    redirect "/"
+    redirect "/trees/#{id}"
   end
 end

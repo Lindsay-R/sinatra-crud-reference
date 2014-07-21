@@ -12,10 +12,14 @@ class TreesTable
     RETURNING id
     SQL
 
-    database_connection.sql(insert_sql)
+    database_connection.sql(insert_sql).first["id"]
   end
 
   def all
     database_connection.sql("SELECT * FROM trees")
+  end
+
+  def find(id)
+    database_connection.sql("SELECT * FROM trees WHERE id = #{id}").first
   end
 end
