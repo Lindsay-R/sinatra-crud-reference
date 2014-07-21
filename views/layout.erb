@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Great Trees</title>
+</head>
+<body>
+<h1>Great Trees</h1>
+
+<% if flash[:notice] %>
+    <p><%= flash[:notice] %></p>
+<% end %>
+
+<%= yield %>
+
+</body>
+</html>

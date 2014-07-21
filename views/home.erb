@@ -1,0 +1,12 @@
+<a href="/trees/new">New Tree</a>
+
+<ul>
+  <% trees.each do |tree| %>
+    <li>
+      <p><%= tree["name"] %></p>
+      <p><%= tree["species"] %></p>
+      <p><%= tree["country"] %></p>
+      <img src="<%= tree["image"] %>" />
+    </li>
+  <% end %>
+</ul>
