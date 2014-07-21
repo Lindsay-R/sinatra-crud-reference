@@ -22,4 +22,17 @@ class TreesTable
   def find(id)
     database_connection.sql("SELECT * FROM trees WHERE id = #{id}").first
   end
+
+  def update(id, attributes)
+    update_sql = <<-SQL
+    UPDATE trees
+    SET name = '#{attributes[:name]}',
+    species = '#{attributes[:species]}',
+    country = '#{attributes[:country]}',
+    image = '#{attributes[:image]}'
+    WHERE id = #{id};
+    SQL
+
+    database_connection.sql(update_sql)
+  end
 end

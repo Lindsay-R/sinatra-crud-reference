@@ -1,0 +1,24 @@
+<form action="/trees/<%= tree["id"] %>" method="post">
+  <input type="hidden" name="_method" value="patch"/>
+  <ul>
+    <li>
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" value="<%= tree["name"] %>"/>
+    </li>
+    <li>
+      <label for="species">Species</label>
+      <input type="text" name="species" id="species" value="<%= tree["species"] %>"/>
+    </li>
+    <li>
+      <label for="country">Country</label>
+      <input type="text" name="country" id="country" value="<%= tree["country"] %>"/>
+    </li>
+    <li>
+      <label for="image">Image</label>
+      <input type="text" name="image" id="image" value="<%= tree["image"] %>"/>
+    </li>
+    <li>
+      <input type="submit" value="Update Tree"/>
+    </li>
+  </ul>
+</form>
