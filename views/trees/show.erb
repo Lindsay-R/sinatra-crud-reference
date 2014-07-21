@@ -2,6 +2,11 @@
 
 <p><%= tree["species"] %></p>
 <p><%= tree["country"] %></p>
-<img src="<%= tree["image"] %>" />
+<img src="<%= tree["image"] %>"/>
 
 <a href="/trees/<%= tree["id"] %>/edit">Edit Tree</a>
+
+<form method="post" action="/trees/<%= tree["id"] %>">
+  <input type="hidden" name="_method" value="delete"/>
+  <input type="submit" value="Delete Tree"/>
+</form>

@@ -32,5 +32,11 @@ feature "Trees CRUD" do
     expect(page).to have_content "Banyana"
     expect(page).to have_content "Indiana"
     expect(page).to have_css "img[src='http://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Acharya_Jagadish_Chandra_Bose_Indian_Botanic_Garden_-_Howrah_2011-01-08_9728.JPG/800px-Acharya_Jagadish_Chandra_Bose_Indian_Botanic_Garden_-_Howrah_2011-01-08_9728.JPG']"
+
+    click_button "Delete Tree"
+
+    expect(page).to have_content "Tree deleted"
+
+    expect(page).to_not have_content "The Really Great Banyan"
   end
 end

@@ -59,4 +59,12 @@ class App < Sinatra::Application
 
     redirect "/trees/#{params[:id]}"
   end
+
+  delete "/trees/:id" do
+    @trees_table.delete(params[:id])
+
+    flash[:notice] = "Tree deleted"
+
+    redirect "/"
+  end
 end
