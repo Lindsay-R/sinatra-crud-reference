@@ -3,7 +3,7 @@
 <ul>
   <% trees.each do |tree| %>
     <li>
-      <p><%= tree["name"] %></p>
+      <p><a href="/trees/<%= tree["id"] %>"><%= tree["name"] %></a></p>
       <p><%= tree["species"] %></p>
       <p><%= tree["country"] %></p>
       <img src="<%= tree["image"] %>" />
