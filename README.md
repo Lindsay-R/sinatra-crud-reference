@@ -4,11 +4,12 @@ This is a reference app for CRUD applications with Sinatra
 
 ## Routes
 
-1. GET /trees/new - get the new tree form
-1. POST /trees - create a new tree
-1. GET /trees/:id/edit - get the edit tree form
-1. PATCH /trees/:id - update a tree
-1. DELETE /trees/:id - delete a tree
+- GET /trees - list all trees
+- GET /trees/new - get the new tree form
+- POST /trees - create a new tree
+- GET /trees/:id/edit - get the edit tree form
+- PATCH /trees/:id - update a tree
+- DELETE /trees/:id - delete a tree
 
 ## Method Overriding
 
