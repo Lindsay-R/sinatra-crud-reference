@@ -1,6 +1,6 @@
 # Sinatra CRUD Reference
 
-This is a refernce app for CRUD applications with Sinatra
+This is a reference app for CRUD applications with Sinatra
 
 ## Routes
 
